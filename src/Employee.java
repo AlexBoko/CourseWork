@@ -1,9 +1,12 @@
+import java.util.Objects;
+
 public class Employee {
     private final String fio;
+    public String getName;
     private int department;
     private double salary;
     private int id;
-    public static int counter;
+    public static int counter = 0;
 
     public Employee(String fio, int department, double salary) {
         this.fio = fio;
@@ -13,22 +16,34 @@ public class Employee {
     }
 
 
-
     public String getFio() {
-        return fio;
+        return this.fio;
     }
 
     public int getDepartment() {
-        return department;
+        return this.department;
+    }
+
+    public void setDepartment() {
+        this.department = department;
     }
 
     public double getSalary() {
-        return salary;
+        return this.salary;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
     }
 
     public int getId() {
         return id;
     }
+
+    public static int getCounter() {
+        return counter;
+    }
+
 
     @Override
     public String toString() {
@@ -39,4 +54,5 @@ public class Employee {
                 ", id=" + id +
                 '}';
     }
+
 }

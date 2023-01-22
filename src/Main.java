@@ -30,6 +30,5 @@ public class Main {
 
         employeeBook.printAllFullNames();
         System.out.println();
-
     }
 }
